@@ -12,8 +12,9 @@
             <h1>Modifica post: {{$post->title}}</h1>
         </div>
             
-        <form action="{{route('admin.posts.store')}}" method="POST">
-            @csrf    
+        <form action="{{route('admin.posts.update', $post->id)}}" method="POST">
+            @csrf
+            @method('PUT')
             
             <div class="form-group">
                 <label for="title">Titolo</label>
