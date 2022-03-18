@@ -28,8 +28,8 @@
 
                     @php $selected = old('published')?? $post->published; @endphp
 
-                    <option value="0" {{$post->published == 0 ?? "selected" : ""}}>Non pubblicare</option>
-                    <option value="1">Pubblica</option>
+                    <option value="0" {{($post->published == 0) ? "selected" : ""}}>Non pubblicare</option>
+                    <option value="1" {{($post->published == 1) ? "selected" : ""}}>Pubblica</option>
                 </select>
             </div>
             
